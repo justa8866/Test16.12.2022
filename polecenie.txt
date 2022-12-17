@@ -1,0 +1,23 @@
+URL /advanced-list
+
+Show Job posts in the mat-list (1 point)
+GET https://636ce2d8ab4814f2b2712854.mockapi.io/job-posts
+
+Show mat-selection-list of Job Tags (1 point)
+GET https://636ce2d8ab4814f2b2712854.mockapi.io/job-tags
+
+Show mat-select of sorting options: “asc”, “desc” (1 point)
+
+Sorting should be done inside of component (locally)
+
+When choosing “asc”, it should sort job posts by title alphabetically (a-z)
+When choosing “desc”, it should sort job posts by title alphabetically (z-a)
+
+When Clicking Remove button (1 point)
+it should remove this job post
+DELETE https://636ce2d8ab4814f2b2712854.mockapi.io/job-posts/:jobPostId
+
+When selecting some of the options in mat-selection-list (2 points)
+it should filter out the job posts with these tag ids inside of jobTagIds array property
+
+Extra: if you are able to refresh the list of products after clicking Remove Button (2 points)

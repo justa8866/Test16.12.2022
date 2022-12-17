@@ -1,0 +1,28 @@
+<mat-card><mat-card-title> Jobs </mat-card-title><mat-card-content>
+<mat-selection-list role="list" #selected (selectionChange)="onSelection($event, selected.selectedOptions.selected)">
+  <mat-list-option role="listitem" *ngFor="let item of jobTag$ | async" [value]="item">
+    {{item.name}}
+  </mat-list-option>
+</mat-selection-list>
+
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Choose an option</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let item of orders | async" [value]="item" (click)="sort(item)">
+      {{item}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+<mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of jobPosts$  | async">{{item.title}}
+
+
+  <button mat-raised-button color="primary" (click)="delete(item.id)"
+  >Remove</button>
+</mat-list-item></mat-list>
+
+</mat-card-content></mat-card>
